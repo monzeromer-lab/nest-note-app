@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="/assets/profile.css">
+    <title>Profile | Nota</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="menu">
+            <ul class="real_menu">
+                <li class="button_link"><a href="/profile" class="remove_underline">Profile</a></li>
+                <li class="button_link"><a href="/notes" class="remove_underline">Notes</a></li>
+                <li class="button_link im_big"><a href="/notes/new" class="remove_underline">New Note</a></li>
+                <li class="button_link"><a href="/logout" class="remove_underline">Log Out</a></li>
+            </ul>
+        </div>
+
+        <div class="page">
+            <div class="box">
+                <form action="/profile/{{id}}/edit" method="post" class="im_form">
+                    <input type="text" name="name" value="Monzer Omer" class="input" required>
+                    <div>
+                        <p>Notes: <span>{{notes}}</span></p>
+                        <p>Shared: <span>{{shared_notes}}</span></p>
+                    </div>
+                    <input type="text" name="username" value="@monzeromer" class="input" required>
+                    <input type="email" name="email" value="monzer.a.omer@gmail.com" class="input" required>
+                    <input type="submit" value="Edit" class="input">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
